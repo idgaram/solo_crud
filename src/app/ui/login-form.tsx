@@ -11,12 +11,12 @@ export default function LoginForm() {
   const [errorMessage, setErrorMessage] = useState("");
   const [isPending, setIsPending] = useState(false);
 
-  async function handleSubmit(event) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsPending(true);
     setErrorMessage("");
 
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
 
     try {
       const result = await authenticate(undefined, formData);
