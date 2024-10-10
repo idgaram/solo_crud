@@ -25,11 +25,7 @@ const Read = () => {
       <ul className="text-orange-400">
         {recettes.map((recette) => (
           <li key={recette.name}>
-            <Recipe
-              name={recette.name}
-              process={recette.process}
-              id={recette.id}
-            />
+            <Recipe name={recette.name} process={recette.process} />
           </li>
         ))}
       </ul>
