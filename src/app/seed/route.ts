@@ -34,7 +34,7 @@ async function seedRecettes() {
   await client.sql`
     CREATE TABLE IF NOT EXISTS recettes (
       id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-      name VARCHAR(45) NOT NULL,
+      name VARCHAR(45) NOT NULL UNIQUE,
       process TEXT NOT NULL
     );  
   `;
@@ -44,7 +44,7 @@ async function seedRecettes() {
       (recette) => client.sql`
       INSERT INTO recettes (id, name, process)
       VALUES (${recette.id}, ${recette.name}, ${recette.process})
-      ON CONFLICT (id) DO NOTHING
+      ON CONFLICT (name) DO NOTHING
     `
     )
   );
