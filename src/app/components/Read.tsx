@@ -3,7 +3,6 @@
 import Recipe from "./Recipe";
 
 type Recette = {
-  id: number;
   name: string;
   process: string;
 };
@@ -11,12 +10,10 @@ type Recette = {
 const Read = () => {
   const recettes: Recette[] = [
     {
-      id: 1,
       name: "risotto",
       process: "fais cuire le ris et ajoute le otto dedans, top bravo à toi",
     },
     {
-      id: 2,
       name: "sangoku no gohan",
       process: "raissu no gohan cuku sochite goku no bulma hai desu ne",
     },
