@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 const Recipe = ({ name, process }: { name: string; process: string }) => {
   return (

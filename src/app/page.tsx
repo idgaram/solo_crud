@@ -4,8 +4,13 @@ import Create from "./components/Create";
 import Update from "./components/Update";
 import Delete from "./components/Delete";
 import Read from "./components/Read";
+import { fetchRecettes } from "@/app/lib/data";
+import type { Recette } from "./type/types";
 
-export default function Home() {
+export default async function Home() {
+  const recettes: Recette[] = (await fetchRecettes()) || [];
+
+  console.log(recettes);
   return (
     <div className="text-orange-400 ">
       <MaxWidthWrapper>
@@ -21,7 +26,7 @@ export default function Home() {
             </span>{" "}
           </h2>
         </div>
-        <Read />
+        <Read recettes={recettes} />
         <Create />
         <Update />
         <Delete />
