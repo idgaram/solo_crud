@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${robotoBold.variable} font-[family-name:var(--font-roboto)] antialiased bg-[url('/img/manman.png')] bg-no-repeat bg-center bg-cover`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

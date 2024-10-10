@@ -1,24 +1,9 @@
 "use client";
 
 import Recipe from "./Recipe";
+import type { ReadProps } from "../type/types";
 
-type Recette = {
-  name: string;
-  process: string;
-};
-
-const Read = () => {
-  const recettes: Recette[] = [
-    {
-      name: "risotto",
-      process: "fais cuire le ris et ajoute le otto dedans, top bravo à toi",
-    },
-    {
-      name: "sangoku no gohan",
-      process: "raissu no gohan cuku sochite goku no bulma hai desu ne",
-    },
-  ];
-
+const Read = ({ recettes }: ReadProps) => {
   return (
     <div className="  bg-white/20 backdrop-blur-lg rounded-xl p-8 mb-8">
       <h2 className="text-xl text-orange-400 m-8 my-0">READ</h2>

@@ -17,6 +17,12 @@ const recettes = [
   },
   {
     id: uuidv4(),
+    name: "risottard",
+    process:
+      "fais cuire le ris et ajoute le otto dedans, top bravo à toi, mais fais ça de façon artistique",
+  },
+  {
+    id: uuidv4(),
     name: "sangoku no gohan",
     process: "raissu no gohan cuku sochite goku no bulma hai desu ne",
   },
