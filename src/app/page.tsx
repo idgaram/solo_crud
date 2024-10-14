@@ -4,13 +4,41 @@ import Create from "./components/Create";
 import Update from "./components/Update";
 import Delete from "./components/Delete";
 import Read from "./components/Read";
-import { fetchRecettes } from "@/app/lib/data";
-import type { Recette } from "./type/types";
+// import { fetchRecettes } from "@/app/lib/data";
+// import { useEffect, useState, useRef } from "react";
+// import { fetchRecettes } from "./lib/data";
+// import type { Recette } from "./type/types";
 
 export default async function Home() {
-  const recettes: Recette[] = (await fetchRecettes()) || [];
+  // const recettes: Recette[] = (await fetchRecettes()) || [];
+  // const recetteNameRef = useRef();
+  // const recetteNameToDeleteRef = useRef();
+  // const recetteNameToUpdateRef = useRef();
 
-  console.log(recettes);
+  // const [recettes, setRecettes] = useState([]);
+  // const [updated, setUpdates] = useState(false);
+  // const [created, setCreated] = useState(false);
+  // const [deleted, setDeleted] = useState(false);
+  // const [updatedError, setUpdatedError] = useState(false);
+  // const [deletedError, setDeletedError] = useState(false);
+  // fetchRecettes();
+
+  // async function getRecettes() {
+  //   const postData = {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-type": "application/json",
+  //     },
+  //   };
+  //   const res = await fetchRecettes()
+  // }
+
+  // async function createRecettes() {}
+
+  // async function deleteRecettes() {}
+
+  // async function updateRecettes() {}
+
   return (
     <div className="text-orange-400 ">
       <MaxWidthWrapper>
@@ -26,7 +54,7 @@ export default async function Home() {
             </span>{" "}
           </h2>
         </div>
-        <Read recettes={recettes} />
+        <Read />
         <Create />
         <Update />
         <Delete />
